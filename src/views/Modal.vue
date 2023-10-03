@@ -76,7 +76,7 @@ defineExpose({ open })
 
 </script>
 <template>
-   <el-dialog class="!rounded-md !p-0" v-model="_visible" width="90%" :show-close="false" top="5vh">
+   <el-dialog class="!rounded-md !p-0" v-model="_visible" width="60%" :show-close="false" top="5vh">
       <template #footer>
          <div class="flex justify-between dialog-footer px-5">
             <div class="add-band">

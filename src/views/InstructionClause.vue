@@ -129,7 +129,7 @@ function openModal(item) {
             <p>{{ ind + 1 }}. Кўрсатма бандини киритиш</p>
          </div>
          <div style="display: flex; justify-content: flex-end; margin-top: 10px; margin-right: 20px;">
-            <el-button @click="openModal(_item)" type="primary">Javob</el-button>
+         <el-button :disabled="!_item.id" @click="openModal(_item)" type="primary">Javob</el-button>
          </div>
          <el-form ref="ruleFormRef" :rules="rules" :model="form" label-position="top">
             <el-form-item style="margin: 15px" label="Банд мазмуни" placeholder="Банд мазмуни" prop="text">
@@ -171,7 +171,7 @@ function openModal(item) {
                   </el-select>
                </el-form-item>
                <el-form-item>
-                  <el-button @click="postInstructionClause(_item, ind)" style="width: 45%;" type="primary">Saqlash</el-button>
+                  <el-button :disabled="_item.id" @click="postInstructionClause(_item, ind)" style="width: 45%;" type="primary">Saqlash</el-button>
                   <el-button @click="handleItem" style="width: 45%;" type="primary">Band qo'shish</el-button>
                </el-form-item>
             </div>
